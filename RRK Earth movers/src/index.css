@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --color-brand-yellow: #F4B400;
+  --color-brand-yellow-dark: #D4A000;
+  --color-brand-gray: #1F2937;
+  --color-brand-gray-light: #374151;
+  --color-brand-blue: #1E3A8A;
+  --color-brand-blue-light: #2C4FA8;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #F8FAFC;
+  --color-border-soft: #E5E9F0;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    color: var(--color-brand-gray);
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); letter-spacing: -0.01em; }
+  ::selection { background: var(--color-brand-yellow); color: var(--color-brand-gray); }
+}
+
+@layer utilities {
+  .hazard-stripe {
+    background: repeating-linear-gradient(
+      135deg,
+      var(--color-brand-yellow), var(--color-brand-yellow) 14px,
+      var(--color-brand-gray) 14px, var(--color-brand-gray) 28px
+    );
+  }
+  .section-padding { padding-top: 5rem; padding-bottom: 5rem; }
+  .container-px { padding-left: 1.25rem; padding-right: 1.25rem; }
+  @media (min-width:1024px) { .container-px { padding-left:3rem; padding-right:3rem; } }
+  .card-surface {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-soft);
+    border-radius: 1rem;
+    box-shadow: 0 1px 2px rgba(15,23,42,.04);
+    transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+  }
+  .card-surface:hover {
+    box-shadow: 0 18px 40px -12px rgba(15,23,42,.14);
+    border-color: rgba(244,180,0,.45);
+  }
+  .badge-soft {
+    display: inline-flex; align-items: center; gap: .5rem;
+    background: rgba(30,58,138,.06); color: var(--color-brand-blue);
+    font-weight: 600; font-size: .75rem; letter-spacing: .08em;
+    text-transform: uppercase; padding: .35rem .85rem; border-radius: 999px;
+  }
+  .glass {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+}

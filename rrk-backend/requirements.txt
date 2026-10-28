@@ -1,0 +1,15 @@
+Django==6.0.7
+djangorestframework==3.17.1
+django-cors-headers==4.9.0
+pillow==12.1.1
+dj-database-url==3.1.2
+whitenoise==6.12.0
+python-dotenv==1.2.2
+gunicorn==26.0.0
+psycopg2-binary==2.9.12
+django-storages==1.14.6
+boto3==1.43.52
+requests==2.33.1
+django-ratelimit==3.0.1
+django-redis==7.0.0
+redis==8.0.1

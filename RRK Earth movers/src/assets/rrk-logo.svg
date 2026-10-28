@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+  <polygon points="60,5 100,35 20,35" fill="#1E3A8A"/>
+  <polygon points="60,5 80,35 40,35" fill="#F4B400"/>
+  <text x="10" y="65" font-family="Arial" font-weight="bold" font-size="28" fill="#1E3A8A">RRK</text>
+  <text x="10" y="78" font-family="Arial" font-size="11" fill="#374151">Earth Movers</text>
+</svg>
